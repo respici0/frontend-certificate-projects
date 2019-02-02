@@ -1,6 +1,7 @@
 # Frontend-Certificate-Projects
 
 Projects I completed to obtain the Frontend Certificate
+
 Completion time: 600+ hours
 
 [freeCodeCamp](https://www.freecodecamp.org/) has a rigorous certificate program that shows dedication and passion to pursue a career in Full Stack Development. They are a non-profit organization dedicated to helping millions learn coding. 
