@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="form.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="intro">
+      <h1 id="title">JavaScript Survey Form</h1>
+      <p id="description">
+        Please fill out this form and select your favorite JavaScript library
+      </p>
+    </div>
+    <form id="survey-form">
+      <div class="input-text">
+        <label for="name" id="name-label">Name:</label>
+        <input
+          required
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter full name here"
+        />
+        <label for="email" id="email-label">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter email here"
+        />
+        <label for="age" id="number-label">Age:</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="18"
+          max="99"
+          placeholder="18 - 99"
+        />
+        <label for="currentPos">Which option best describes your role?</label>
+        <select id="dropdown" name="currentPos" class="dropdown">
+          <option disabled="" value="">Select an option</option>
+          <option value="student">Student</option>
+          <option value="job">Full Time Job</option>
+          <option value="learner">Full Time Learner</option>
+          <option value="preferNo">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="choice-area">
+        <label for="radio-buttons">What do you desire to become?</label>
+        <ul>
+          <li>
+            <input type="radio" name="radio-buttons" value="frontend" />
+            Frontend Engineer
+          </li>
+          <li>
+            <input type="radio" name="radio-buttons" value="backend" /> Backend
+            Engineer
+          </li>
+          <li>
+            <input type="radio" name="radio-buttons" value="fullstack" /> Full
+            Stack Engineer
+          </li>
+        </ul>
+        <label for="checkbox-buttons"
+          >What is your favorite javascript language? (Check all that
+          apply)</label
+        >
+        <ul>
+          <li>
+            <input type="checkbox" name="checkbox-buttons" value="jQuery" />
+            jQuery
+          </li>
+          <li>
+            <input type="checkbox" name="checkbox-buttons" value="react" />
+            React
+          </li>
+          <li>
+            <input type="checkbox" name="checkbox-buttons" value="angular" />
+            Angular
+          </li>
+          <li>
+            <input type="checkbox" name="checkbox-buttons" value="vue" /> Vue
+          </li>
+          <li>
+            <input type="checkbox" name="checkbox-buttons" value="other" />
+            Other
+          </li>
+        </ul>
+      </div>
+      <div class="textarea-container">
+        <label for="textarea">Any additional comments?</label>
+        <textarea id="textarea" name="textarea" rows="5" cols="35"></textarea>
+      </div>
+      <button type="submit" id="submitButton">Submit</button>
+    </form>
+  </body>
+</html>

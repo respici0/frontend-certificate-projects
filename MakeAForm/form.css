@@ -1,0 +1,70 @@
+body {
+  background: #e5ebff;
+  font-family: "Roboto", sans-serif;
+}
+
+.intro {
+  text-align: center;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #e8e8e8;
+  border: 1px solid;
+  margin: 0 25%;
+  padding: 50px;
+}
+
+.input-text,
+.choice-area,
+.textarea-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin: 10px;
+}
+
+label {
+  text-align: right;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+select,
+textarea {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  border: 2px solid lightskyblue;
+}
+
+button {
+  border: none;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 15px;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
