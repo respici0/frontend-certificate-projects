@@ -11,6 +11,9 @@ View my certificates [HERE](https://www.freecodecamp.org/respici0)
 codepen profile [HERE](https://codepen.io/panderhh/)
 
 [Tribute Page](https://codepen.io/panderhh/full/jdVdPd)
+[GOT Documentation](https://codepen.io/panderhh/full/XOMjGO)
+[MSI Product Landing Page](https://codepen.io/panderhh/full/YBZyLR)
+[JS Survey Form](https://codepen.io/panderhh/full/YBZyLR)
 
 
 
