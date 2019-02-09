@@ -2,6 +2,8 @@
 
 Projects I completed to obtain the Frontend Certificates
 
+I am doing these for fun and to sharpen my skills!
+
 [freeCodeCamp](https://www.freecodecamp.org/) has a rigorous certificate program which showcases a developers dedication and passion. Each certificate takes on average 300 hours to complete, total 1600+ hours for all certificates. They are a non-profit organization dedicated to helping millions learn coding.
 
 View my certificates [HERE](https://www.freecodecamp.org/respici0)
