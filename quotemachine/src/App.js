@@ -6,8 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      quote: "",
-      author: ""
+      quotes: ""
     };
   }
 
@@ -22,10 +21,14 @@ class App extends Component {
 
   onGetQuoteSuccess = response => {
     console.log("Random Quote", response.data.quotes);
+    this.setState({
+      quotes: response.data.quotes
+    });
+    console.log("In State", this.state.quotes);
   };
 
   onGetQuoteError = response => {
-    console.log("Quote Error", response);
+    console.log("Unable to get quotes", response);
   };
 
   quoteButtonClick = () => {
