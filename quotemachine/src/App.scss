@@ -1,18 +1,57 @@
-$primaryColor: whitesmoke;
-$accent: black;
+@import url("https://fonts.googleapis.com/css?family=Sniglet");
+
+$primaryColor: orangered;
+$accent: white;
 
 * {
   margin: 0;
   padding: 0;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $primaryColor;
+  font-family: "Sniglet", cursive;
+  height: 100vh;
+}
+
 #quote-box {
-  height: 100%;
-  width: 100%;
-  border: 1px solid black;
+  position: relative;
+  width: 450px;
+  background-color: $accent;
+  font-size: 22px;
+  padding: 40px 50px;
+  border-radius: 5px;
   text-align: center;
 
+  #author {
+    font-size: 16px;
+    text-align: right;
+  }
+
   button {
-    width: 15%;
+    &hover {
+      opacity: 0.8;
+    }
+    &#tweet-quote {
+      float: left;
+    }
+    &#new-quote {
+      float: right;
+    }
+  }
+}
+
+.footer {
+  font-size: 0.9em;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+
+  a {
+    color: white;
   }
 }
