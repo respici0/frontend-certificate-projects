@@ -1,3 +1,6 @@
+$primaryColor: whitesmoke;
+$accent: black;
+
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +11,8 @@
   width: 100%;
   border: 1px solid black;
   text-align: center;
-}
 
-#quote-box button {
-  width: 15%;
+  button {
+    width: 15%;
+  }
 }
-/*# sourceMappingURL=App.css.map */
