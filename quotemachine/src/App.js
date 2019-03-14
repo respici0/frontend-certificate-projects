@@ -67,7 +67,6 @@ class App extends Component {
             <a id="tweet-quote" href={`https://twitter.com/intent/tweet?text="${chosenQuote}" -${author}`} target="_block">  <button
               type="button"
               className="btn btn-primary"
-              id="tweet-quote"
             ><i className="fab fa-twitter" /></button></a>
             <button
               type="button"
