@@ -7,7 +7,7 @@ class App extends Component {
     super(props);
     this.state = {
       quotesArr: "",
-      chosenQuote: "Motivational quotes to keep you going!",
+      chosenQuote: "Motivational quotes to keep you going",
       author: "Respici0"
     };
   }
@@ -51,12 +51,6 @@ class App extends Component {
 
   };
 
-  tweetButtonClick = () => {
-    console.log("Tweet button clicked");
-  };
-
-
-
   render() {
     let chosenQuote = this.state.chosenQuote;
     let author = this.state.author;
@@ -65,19 +59,16 @@ class App extends Component {
         <div className="App">
           <div id="quote-box">
             <div id="text">
-              <p><i class="fas fa-quote-left"></i> {chosenQuote} <i class="fas fa-quote-right"></i></p>
+              <p><i className="fas fa-quote-left"></i> {chosenQuote} <i className="fas fa-quote-right"></i></p>
             </div>
             <div id="author">
               <p><strong>-{author}</strong></p>
             </div>
-            <button
+            <a id="tweet-quote" href={`https://twitter.com/intent/tweet?text="${chosenQuote}" -${author}`} target="_block">  <button
               type="button"
               className="btn btn-primary"
               id="tweet-quote"
-              onClick={this.tweetButtonClick}
-            >
-              <i className="fab fa-twitter" />
-            </button>
+            ><i className="fab fa-twitter" /></button></a>
             <button
               type="button"
               className="btn btn-success"

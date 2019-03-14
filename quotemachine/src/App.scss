@@ -33,7 +33,7 @@ $font: "Sniglet", cursive;
   width: 600px;
   background-color: colors(background);
   font-size: 22px;
-  padding: 40px 50px;
+  padding: 50px 60px;
   border-radius: 5px;
   text-align: center;
 
@@ -48,7 +48,7 @@ $font: "Sniglet", cursive;
     text-align: right;
   }
 
-  button {
+  button{
     &#tweet-quote {
       float: left;
     }
