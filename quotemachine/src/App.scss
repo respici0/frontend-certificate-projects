@@ -1,7 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Sniglet");
 
-$primaryColor: orangered;
-$accent: white;
+$colors: (
+  background: whitesmoke,
+  primaryColor: #db5400,
+  accentOne: #ffe100,
+  accentTwo: #3c00ff
+);
+
+@function colors($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+$font: "Sniglet", cursive;
 
 * {
   margin: 0;
@@ -13,19 +23,25 @@ $accent: white;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $primaryColor;
-  font-family: "Sniglet", cursive;
+  background-color: colors(primaryColor);
+  font-family: $font;
   height: 100vh;
 }
 
 #quote-box {
   position: relative;
-  width: 450px;
-  background-color: $accent;
+  width: 600px;
+  background-color: colors(background);
   font-size: 22px;
   padding: 40px 50px;
   border-radius: 5px;
   text-align: center;
+
+#text {
+  i {
+    color: colors(accentOne);
+  }
+}
 
   #author {
     font-size: 16px;
@@ -33,9 +49,6 @@ $accent: white;
   }
 
   button {
-    &hover {
-      opacity: 0.8;
-    }
     &#tweet-quote {
       float: left;
     }
@@ -50,8 +63,13 @@ $accent: white;
   display: block;
   text-align: center;
   margin-top: 10px;
-
+  
   a {
     color: white;
+    &:hover {
+      text-decoration:none;
+      color: colors(accentOne);
+      font-size: 15px;
+    }
   }
 }

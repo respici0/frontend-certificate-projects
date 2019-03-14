@@ -6,7 +6,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      quotes: ""
+      quotesArr: "",
+      chosenQuote: "Motivational quotes to keep you going!",
+      author: "Respici0"
     };
   }
 
@@ -17,14 +19,20 @@ class App extends Component {
       )
       .then(this.onGetQuoteSuccess)
       .catch(this.onGetQuoteError);
+
   };
 
   onGetQuoteSuccess = response => {
     console.log("Random Quote", response.data.quotes);
     this.setState({
-      quotes: response.data.quotes
+      quotesArr: response.data.quotes
     });
-    console.log("In State", this.state.quotes);
+    console.log("In State", this.state.quotesArr);
+  };
+
+  getRandomQuote = () => {
+    let max = this.state.quotesArr.length;
+    return Math.floor(Math.random() * Math.floor(max));
   };
 
   onGetQuoteError = response => {
@@ -33,22 +41,34 @@ class App extends Component {
 
   quoteButtonClick = () => {
     console.log("Quote button clicked");
+    let index = this.getRandomQuote();
+    this.setState({
+      chosenQuote: this.state.quotesArr[index].quote,
+      author: this.state.quotesArr[index].author
+    }, () => {
+      console.log(index, this.state.chosenQuote, this.state.author);
+    })
+
   };
 
   tweetButtonClick = () => {
     console.log("Tweet button clicked");
   };
 
+
+
   render() {
+    let chosenQuote = this.state.chosenQuote;
+    let author = this.state.author;
     return (
       <React.Fragment>
         <div className="App">
           <div id="quote-box">
             <div id="text">
-              <p>"Random quote that will be dynamic soon"</p>
+              <p><i class="fas fa-quote-left"></i> {chosenQuote} <i class="fas fa-quote-right"></i></p>
             </div>
             <div id="author">
-              <p>-Author Name</p>
+              <p><strong>-{author}</strong></p>
             </div>
             <button
               type="button"
